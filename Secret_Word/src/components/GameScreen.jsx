@@ -1,8 +1,11 @@
 import '../styles/components/gamescreen.sass'
 
-const GameScreen = () => {
+const GameScreen = ({verifyLetter}) => {
   return (
-    <div>GameScreen</div>
+    <div id='GameScreen'>
+        <h1>Game</h1>
+        <button onClick={verifyLetter}>Start Game</button>
+    </div>
   )
 }
 

@@ -1,8 +1,12 @@
 import '../styles/components/endscreen.sass'
 
-const EndScreen = () => {
+const EndScreen = ({retry}) => {
   return (
-    <div>EndScreen</div>
+    <div id='EndScreen'>
+        <h1>End Game</h1>
+        <p>Score!</p>
+        <button onClick={retry}>Retry!</button>
+    </div>
   )
 }
 
