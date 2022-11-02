@@ -14,8 +14,12 @@ const stages = [
   {id:2,name: 'game'},
   {id:3,name: 'end'},
 ]
+
 function App() {
   const [GameStage, setGameStage] = useState(stages[0].name)
+  const [word] = useState(wordsList)
+
+  console.log(word)
   return (
     <div className="App">
      {GameStage === "start" && <StartScreen/>}
