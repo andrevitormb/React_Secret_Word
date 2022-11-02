@@ -1,11 +1,26 @@
-import { useState } from 'react'
+//Components
+import StartScreen from './components/StartScreen'
+import GameScreen from './components/GameScreen'
+import EndScreen from './components/EndScreen'
+//React
+import { useState, useCallback, useEffect } from 'react'
+//Sass
 import './styles/components/app.sass'
+//Data
+import {wordsList} from './components/data/words'
 
+const stages = [
+  {id:1,name: 'start'},
+  {id:2,name: 'game'},
+  {id:3,name: 'end'},
+]
 function App() {
-
+  const [GameStage, setGameStage] = useState(stages[0].name)
   return (
     <div className="App">
-      <h1>Secret Word</h1>
+     {GameStage === "start" && <StartScreen/>}
+     {GameStage === "game" && <GameScreen/>}
+     {GameStage === "end" && <EndScreen/>} 
     </div>
   )
 }
