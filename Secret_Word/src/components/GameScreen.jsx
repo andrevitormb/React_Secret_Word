@@ -1,3 +1,5 @@
+import { useState, useRef } from 'react';
+
 import '../styles/components/gamescreen.sass'
 
 const GameScreen = ({verifyLetter, 
@@ -9,6 +11,21 @@ const GameScreen = ({verifyLetter,
   attempts,
   score,
   wrongLetters}) => {
+
+    const [letter, setLetter] = useState("");
+
+    const letterInputRef = useRef(null)
+
+    const handleSubmit = (e) => {
+      e.preventDefault()
+
+      verifyLetter(letter)
+
+      setLetter("")
+
+      letterInputRef.current.focus()
+    }
+
   return (
     <div id='GameScreen'>
         <p className='points'>
@@ -30,8 +47,14 @@ const GameScreen = ({verifyLetter,
         </div>
         <div className="letterContainer">
           <p>Try guess a letter of the word </p>
-          <form>
-            <input type="text" name='letter' maxLength="1" required />
+          <form onSubmit={handleSubmit}>
+            <input type="text" 
+              name='letter' 
+              maxLength="1" 
+              required 
+              onChange={(e) => setLetter(e.target.value)}
+              value = {letter}
+              ref = {letterInputRef} />
             <button>Play!</button>
           </form>
         </div>
