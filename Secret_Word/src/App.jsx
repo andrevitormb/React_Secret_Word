@@ -23,6 +23,11 @@ function App() {
   const [pickedWord, setPickedWord] = useState("")
   const [letters, setLetters] = useState([])
 
+  const [guessedLetters, setGuessedLetters] = useState([])
+  const [wrongLetters, setWrongLetters] = useState([])
+  const [attempts, setAttempts]= useState(3)
+  const [score, setScore] = useState(0)
+
   const pickWordAndCategory = () =>{
     //picked a random category
     const categories = Object.keys(word);
@@ -68,7 +73,18 @@ const retry= () =>{
   return (
     <div className="App">
      {GameStage === "start" && <StartScreen startGame = {startGame}/>}
-     {GameStage === "game" && <GameScreen verifyLetter = {verifyLetter}/>}
+     {GameStage === "game" &&(
+     <GameScreen
+      verifyLetter = {verifyLetter} 
+      pickedWord = {pickedWord} 
+      pickedCategory = {pickedCategory} 
+      letters={letters}
+      guessedLetters = {guessedLetters} 
+      wordLetters = {wrongLetters}
+      attempts ={attempts}
+      score = {score}
+      />
+      )}
      {GameStage === "end" && <EndScreen retry = {retry} />} 
     </div>
   )

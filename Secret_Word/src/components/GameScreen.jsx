@@ -1,20 +1,31 @@
 import '../styles/components/gamescreen.sass'
 
-const GameScreen = ({verifyLetter}) => {
+const GameScreen = ({verifyLetter, 
+  pickedWord, 
+  pickedCategory, 
+  letters,
+  guessedLetters, 
+  wordLetters,
+  attempts,
+  score}) => {
   return (
     <div id='GameScreen'>
         <p className='points'>
-          <span>Points: 000</span>
+          <span>Points: {score}</span>
         </p>
         <h1>Guess the Word</h1>
         <h3 className='tip'>
-          Tip about the word: <span> Tip...</span>
+          Tip about the word: <span> {pickedCategory}</span>
         </h3>
-        <p>You have X attempts</p>
+        <p>You have {attempts} attempts</p>
         <div className='wordContainer'>
-          <span className='letter'>A</span>
-          <span className='letter'>B</span>
-          <span className='blankSquare'></span>
+          {letters.map((letter,i) => (
+            guessedLetters.includes(letter) ? (
+              <span key = {i} className = 'letter'>{letter}</span>
+            ) : (
+              <span key = {i} className = 'blankSquare'></span>
+            )
+          ))}
         </div>
         <div className="letterContainer">
           <p>Try guess a letter of the word </p>
@@ -25,8 +36,9 @@ const GameScreen = ({verifyLetter}) => {
         </div>
         <div className="wrongLettersContainer">
           <p>Letters already used</p>
-          <span>a,</span>
-          <span>b,</span>
+          {wrongletters.map((wrongletter, i) => (
+            <span key={i}>{wrongletter}, </span>
+          ))}
         </div>
         {/* <button onClick={verifyLetter}>Start Game</button> */}
     </div>
