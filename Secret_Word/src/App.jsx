@@ -83,6 +83,7 @@ const retry= () =>{
       wordLetters = {wrongLetters}
       attempts ={attempts}
       score = {score}
+      wrongLetters = {wrongLetters}
       />
       )}
      {GameStage === "end" && <EndScreen retry = {retry} />} 

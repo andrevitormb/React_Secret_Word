@@ -7,7 +7,8 @@ const GameScreen = ({verifyLetter,
   guessedLetters, 
   wordLetters,
   attempts,
-  score}) => {
+  score,
+  wrongLetters}) => {
   return (
     <div id='GameScreen'>
         <p className='points'>
@@ -36,7 +37,7 @@ const GameScreen = ({verifyLetter,
         </div>
         <div className="wrongLettersContainer">
           <p>Letters already used</p>
-          {wrongletters.map((wrongletter, i) => (
+          {wrongLetters.map((wrongletter, i) => (
             <span key={i}>{wrongletter}, </span>
           ))}
         </div>
