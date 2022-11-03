@@ -10,8 +10,10 @@ const GameScreen = ({verifyLetter}) => {
         <h3 className='tip'>
           Tip about the word: <span> Tip...</span>
         </h3>
+        <p>You have X attempts</p>
         <div className='wordContainer'>
           <span className='letter'>A</span>
+          <span className='letter'>B</span>
           <span className='blankSquare'></span>
         </div>
         <div className="letterContainer">
