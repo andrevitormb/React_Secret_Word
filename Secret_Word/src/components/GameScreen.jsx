@@ -60,8 +60,8 @@ const GameScreen = ({verifyLetter,
         </div>
         <div className="wrongLettersContainer">
           <p>Letters already used</p>
-          {wrongLetters.map((wrongletter, i) => (
-            <span key={i}>{wrongletter}, </span>
+          {wrongLetters.map((letter, i) => (
+            <span key={i}>{letter}, </span>
           ))}
         </div>
         {/* <button onClick={verifyLetter}>Start Game</button> */}
