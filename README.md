@@ -1,16 +1,15 @@
 # React_Secret_Word_Game
 
-## 👩‍💻  This was a freelance newsletter creation service for the Group Float
+## 👩‍💻  This was a project of a word guessing game, made in : 
 
-[![My Skills](https://skills.thijs.gg/icons?i=html,css,figma&theme=dark)](https://skills.thijs.gg)
-
-
-## ⚡️ Responsive with: 
+[![My Skills](https://skills.thijs.gg/icons?i=react,sass,javascript&theme=dark)](https://skills.thijs.gg)
 
 
+## ⚡️ Prints Screens Game: 
 
-<img src="https://img.icons8.com/color/48/000000/gmail--v1.png"/>
-<img src="https://img.icons8.com/color/48/000000/microsoft-outlook-2019--v2.png"/>
+<img src="https://i.imgur.com/lYk0sUm.png"/>
+<img src="https://i.imgur.com/cqw5jZp.png"/>
+<img src="https://i.imgur.com/4Z3q8LQ.png"/>
 
 ## Contact me 
 [![My Skills](https://skillicons.dev/icons?i=linkedin&perline=3)](https://pt.linkedin.com/in/andre-macedo-a99b02243)
